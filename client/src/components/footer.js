@@ -22,8 +22,13 @@ const Footer = () => (
                 </Col>
             </Row>
             <Row>
-                <Col md="12" style={{ textAlign: 'left', paddingTop: '20px' }}>
+                <Col md="10" style={{ textAlign: 'left', paddingTop: '20px' }}>
                     Copyright your website © 2020 All Rights Reserved
+                </Col>
+                <Col md="2" style={{ textAlign: 'left', paddingTop: '20px' }}>
+                    <a href="https://www.instagram.com/booxchange/?hl=en">
+                        INSTAGRAM
+                    </a>
                 </Col>
             </Row>
         </Container>

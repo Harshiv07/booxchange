@@ -18,18 +18,15 @@ const authRouter = require('./routes/auth')
 const env = process.env.NODE_ENV || 'development'
 
 mongoose
-    .connect(
-        'mongodb+srv://booXchangeDBAdmin:booXchange2020@booxchange-g2tnm.mongodb.net/BooXchange?retryWrites=true&w=majority',
-        {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false,
-            socketTimeoutMS: 3000,
-            keepAlive: true,
-            reconnectTries: 3000,
-        }
-    )
+    .connect(env === 'development' ? config.DB_URI_DEV : config.DB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
+        socketTimeoutMS: 3000,
+        keepAlive: true,
+        reconnectTries: 3000,
+    })
     .then(
         function () {
             //connected successfully

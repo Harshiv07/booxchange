@@ -34,20 +34,23 @@ class CarouselHomepage extends Component {
                         <Row className="title">
                             <Col>
                                 <h1 style={{ marginTop: '50px' }}>
-                                    Landing Page
+                                    BooXchange
                                 </h1>
                                 <br />
                                 <p>
-                                    Our landing page template works on all
-                                    devices, so you only have to set it up once,
-                                    and get beautiful results forever.
+                                    The goal of BooXchange is to make the
+                                    process of learning very easy and
+                                    hassle-free. We provide a platform through
+                                    which people can exchange knowledge easily.
+                                    Join us in this process of making knowledge
+                                    easily available
                                 </p>
-                                <Button
+                                {/* <Button
                                     className="block-1-btn"
                                     variant="outline-primary"
                                 >
                                     Visit Your Dashboard
-                                </Button>
+                                </Button> */}
                             </Col>
 
                             <Col md={4}></Col>
@@ -102,14 +105,15 @@ class CarouselHomepage extends Component {
                 <div className="block-2-bg">
                     <Container>
                         <div class="heading">
-                            <h2>Making your work easier</h2>
+                            <h2>Making knowledge easily available</h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit.
-                                <br /> Etiam semper diam at erat pulvinar, at
-                                pulvinar felis blandit. Vestibulum volutpat
-                                tellus diam, consequat gravida libero rhoncus
-                                ut.
+                                We make the process of learning easy by creating
+                                a platform where people can exchange their notes
+                                and books with others.
+                                <br />
+                                We aim to form a community of people who are
+                                eager to learn and share their knowledge with
+                                others
                             </p>
                         </div>
 
@@ -121,7 +125,16 @@ class CarouselHomepage extends Component {
                             }}
                         >
                             <Col>
-                                <h2>Find out where you stand!</h2>
+                                <h2>Learning Process made hassle free!</h2>
+                                <br />
+                                <p>
+                                    Through our platform you can get the books,
+                                    notes and tutorials just by following a few
+                                    simple steps. The process is hassle free as
+                                    you can get the required material just by
+                                    selecting the order and the material will be
+                                    delivered to your doorstep
+                                </p>
                             </Col>
                             <Col className="block-two-col">
                                 <img
@@ -147,7 +160,17 @@ class CarouselHomepage extends Component {
                                 />
                             </Col>
                             <Col>
-                                <h2>Improve daily!</h2>
+                                <h2>Learning process at an affordable rate!</h2>
+                                <br />
+                                <p>
+                                    No learner should have to worry about the
+                                    cost to gain knowledge
+                                    <br />
+                                    <br />
+                                    We at BooXchange believe a learner’s
+                                    curiosity should not be stopped due to any
+                                    barrier, and definitely not because of money
+                                </p>
                             </Col>
                         </Row>
 
@@ -159,7 +182,13 @@ class CarouselHomepage extends Component {
                             }}
                         >
                             <Col>
-                                <h2>Let recruiters find you!</h2>
+                                <h2>Learning process made quick!</h2>
+                                <br />
+                                <p>
+                                    We aim to deliver any material ordered in a
+                                    day so that the learner does not have to
+                                    waste time.
+                                </p>
                             </Col>
                             <Col className="block-two-col">
                                 <img
@@ -185,7 +214,24 @@ class CarouselHomepage extends Component {
                                 />
                             </Col>
                             <Col>
-                                <h2>Easy on the go access!</h2>
+                                <h2>Benefits of being a “BooXchanger” !</h2>
+                                <br />
+                                <p>
+                                    <ul>
+                                        <li>
+                                            You can get books and notes at lower
+                                            cost
+                                        </li>
+                                        <li>You can earn Quick cash</li>
+                                        <li>
+                                            You can be a part of a larger
+                                            community
+                                        </li>
+                                        <li>
+                                            You can get books during emergency
+                                        </li>
+                                    </ul>
+                                </p>
                             </Col>
                         </Row>
                     </Container>
