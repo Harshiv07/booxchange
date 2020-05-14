@@ -1,0 +1,123 @@
+.bg{
+    min-height: 60vh;
+    /* background: url('../../static/img/background/mesh2.jpg'); */
+    /* background: linear-gradient(to right, rgba(238,174,202), #a294e9); */
+    background-image: linear-gradient(to right, #e0e2e6 , #c5c7ca);    
+    /* background: url('../../static/img/background/cool-background.png'); */
+}
+
+.bg-container{
+    min-height: 60vh;
+    /* background: linear-gradient(90deg, rgba(238,174,202,0.4), rgba(148,187,233,0.4)); */
+}
+
+/* .block-1-wave{
+
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+} */
+
+.bg-one-button{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 250px;
+    /* background-color:"#9b88fc"; */
+}
+/* .btn-grad {background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%)}
+.btn-grad:hover { background-position: right center; } */
+
+
+
+.block-1-btn {
+    border: 2px solid #6c757d;
+    box-shadow: 0px 6px 12px 0px #444;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+.debug{
+    border: 1px solid black;
+}
+
+.title{
+    top: 20vh;
+    position: relative;
+    /* float: left; */
+    /* width: 300px; */
+    /* border: 3px solid #2B2B52; */
+    padding: 10px;
+}
+
+.title-image{
+    box-shadow: 0 14px 28px rgba(43,43,82,0.24);
+    height: 30vh;
+    /* float: right; */
+    /* position: relative; */
+    /* -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate; */
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+.para{
+
+    top: 25vh;
+    /* position: relative;
+    float: right; */
+    /* width: 300px; */
+    /* border: 3px solid #2B2B52; */
+    padding: 10px;
+}
+
+
+/*
+
+BLOCK 2
+
+*/
+
+
+.block-2-bg{
+    margin-top: 20vh;
+}
+
+.heading{ 
+    text-align: center;
+}
+
+.block-two-col{
+    /* opacity: 0.5; */
+    padding: 0px!important;
+    /* background: linear-gradient(to right, #FFFFFF, rgba(155, 136, 252,0.1), #FFFFFF); */
+}
+
+
+/*
+YELLOW: 255,210,0
+GREY: 195, 198, 201
+PURPLE: 155, 136, 252
+*/
+
+.block-two-image{
+    opacity: 0.8!important;
+
+    /* background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%); */
+
+    /* background: url('../../static/img/background/mesh2.jpg');*/
+
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    box-shadow: 10px 10px 5px grey;
+    margin-right: 15px;
+}
+
