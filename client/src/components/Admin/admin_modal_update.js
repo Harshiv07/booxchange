@@ -11,7 +11,7 @@ import {
     InputGroupText,
     Input,
 } from 'reactstrap'
-import { FiEdit } from 'react-icons/fi'
+import { FaEdit } from 'react-icons/fa'
 import axios from 'axios'
 
 class AdminModalUpdate extends Component {
@@ -69,7 +69,7 @@ class AdminModalUpdate extends Component {
         return (
             <div>
                 <Button outline color="primary" size="sm" onClick={this.toggle}>
-                    <FiEdit />
+                    <FaEdit />
                 </Button>
                 <Modal
                     isOpen={this.state.modalEdit}

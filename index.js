@@ -1,6 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const mongoose = require('mongoose').set('debug', true)
 const path = require('path')
 require('dotenv').config()
@@ -39,7 +40,7 @@ mongoose
 
 const app = express()
 app.use(compression())
-
+app.use(cors())
 env !== 'development' &&
     app.use(express.static(path.join(__dirname, 'client/build')))
 

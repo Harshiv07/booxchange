@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
-import { FiXCircle } from 'react-icons/fi'
+import { FaCircleXmark } from 'react-icons/fa6'
 import axios from 'axios'
 
 class AdminFormDeleteItem extends Component {
@@ -37,7 +37,7 @@ class AdminFormDeleteItem extends Component {
         return (
             <div>
                 <Button color="danger" size="sm" onClick={this.toggle}>
-                    <FiXCircle />
+                    <FaCircleXmark />
                 </Button>
                 <Modal
                     isOpen={this.state.modalEdit}

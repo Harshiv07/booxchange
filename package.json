@@ -1,37 +1,38 @@
 {
-	"name": "booxchange2020",
-	"version": "1.0.0",
-	"main": "index.js",
-	"license": "MIT",
-	"engines": {
-		"node": "12.13.0",
-		"yarn": "1.19.1"
-	},
-	"scripts": {
-		"start": "node index.js",
-		"heroku-postbuild": "cd client && npm install && npm run build",
-		"client": "cd client && yarn start",
-		"server": "nodemon index.js",
-		"dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
-	},
-	"dependencies": {
-		"body-parser": "1.18.3",
-		"compression": "1.7.3",
-		"crypto-js": "4.0.0",
-		"dotenv": "6.1.0",
-		"express": "4.16.3",
-		"jwt-simple": "0.5.5",
-		"mongoose": "5.7.7",
-		"morgan": "1.9.1",
-		"nodemailer": "4.6.8",
-		"passport": "0.4.0",
-		"passport-jwt": "4.0.0",
-		"passport-local": "1.0.0",
-		"validator": "13.0.0",
-		"yarn": "1.22.4"
-	},
-	"devDependencies": {
-		"concurrently": "4.0.1",
-		"nodemon": "1.18.4"
-	}
+    "name": "booxchange2020",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "engines": {
+        "node": "18.1.0",
+        "yarn": "1.22.11"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "heroku-postbuild": "cd client && npm install && npm run build",
+        "client": "cd client && yarn start",
+        "server": "nodemon index.js",
+        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    },
+    "dependencies": {
+        "body-parser": "1.20.2",
+        "compression": "1.7.3",
+        "cors": "^2.8.5",
+        "crypto-js": "^4.2.0",
+        "dotenv": "6.1.0",
+        "express": "^4.18.3",
+        "jwt-simple": "0.5.5",
+        "mongoose": "^5.13.22",
+        "morgan": "1.9.1",
+        "nodemailer": "^6.9.12",
+        "passport": "^0.7.0",
+        "passport-jwt": "^4.0.1",
+        "passport-local": "1.0.0",
+        "validator": "^13.11.0",
+        "yarn": "^1.22.22"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "nodemon": "^3.1.0"
+    }
 }

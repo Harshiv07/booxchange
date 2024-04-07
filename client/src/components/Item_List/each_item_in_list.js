@@ -53,7 +53,7 @@ const EachItemInList = ({ FilteredSortedList, currentPage, itemsMaxPage }) => {
                         starDimension="15px"
                         starSpacing="1px"
                         starRatedColor="#072a48"
-                        changeRating={this.changeRating}
+                        // changeRating={this.changeRating}
                         numberOfStars={5}
                         name="rating"
                     />

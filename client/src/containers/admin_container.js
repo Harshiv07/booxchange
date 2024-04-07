@@ -88,7 +88,7 @@ class AdminContainer extends Component {
                                 <Input
                                     type="email"
                                     name="email"
-                                    id="exampleEmail"
+                                    id="id"
                                     placeholder="Admin"
                                     value={this.state.email}
                                     onChange={this.onChangeEmail}
@@ -101,7 +101,7 @@ class AdminContainer extends Component {
                                 <Input
                                     type="password"
                                     name="password"
-                                    id="examplePassword"
+                                    id="pass"
                                     placeholder="********"
                                     value={this.state.password}
                                     onChange={this.onChangePassword}
