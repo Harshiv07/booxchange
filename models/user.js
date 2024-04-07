@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
 const crypto = require('crypto-js')
-const config = require('../config')
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -50,7 +49,7 @@ userSchema.statics.findByCredentials = async (email, password) => {
 
     decryptedPassword = crypto.AES.decrypt(
         user.password,
-        config.secret
+        process.env.secret
     ).toString(crypto.enc.Utf8)
 
     if (decryptedPassword != password) {
@@ -62,7 +61,7 @@ userSchema.statics.findByCredentials = async (email, password) => {
 
 userSchema.methods.generateAuthToken = async function () {
     const user = this
-    const token = jwt.sign({ _id: user._id.toString() }, config.secret)
+    const token = jwt.sign({ _id: user._id.toString() }, process.env.secret)
 
     user.tokens = user.tokens.concat({ token })
     await user.save()
@@ -78,7 +77,7 @@ userSchema.pre('save', function (next) {
     if (user.isModified('password')) {
         user.password = crypto.AES.encrypt(
             user.password,
-            config.secret
+            process.env.secret
         ).toString()
     }
 

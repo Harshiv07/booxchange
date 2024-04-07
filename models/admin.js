@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const crypto = require('crypto-js')
 const jwt = require('jsonwebtoken')
-const config = require('../config')
 
 const Schema = mongoose.Schema
 
@@ -28,7 +27,7 @@ adminSchema.methods.generateAuthToken = async function () {
         {
             _id: admin._id.toString(),
         },
-        config.secret
+        process.env.secret
     )
 
     admin.tokens = admin.tokens.concat({ token })
@@ -44,7 +43,7 @@ adminSchema.statics.findByCredentials = async (id, pass) => {
         throw new Error('Unable to login')
     }
 
-    decryptedPass = crypto.AES.decrypt(admin.pass, config.secret).toString(
+    decryptedPass = crypto.AES.decrypt(admin.pass, process.env.secret).toString(
         crypto.enc.Utf8
     )
 
@@ -58,7 +57,10 @@ adminSchema.statics.findByCredentials = async (id, pass) => {
 adminSchema.pre('save', function (next) {
     const admin = this
     if (admin.isModified('pass')) {
-        admin.pass = crypto.AES.encrypt(admin.pass, config.secret).toString()
+        admin.pass = crypto.AES.encrypt(
+            admin.pass,
+            process.env.secret
+        ).toString()
     }
 
     next()
