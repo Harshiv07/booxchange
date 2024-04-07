@@ -98,26 +98,29 @@ class CheckoutContainer extends Component {
             } = this.state
             const { getCart, selectorTotalAmountCart } = this.props
             const ref = Math.random().toString(36).substring(5) + Date.now()
-            const req = axios.post('/api/add/orders', {
-                ref,
-                customerinfo: {
-                    email,
-                    firstName,
-                    lastName,
-                    postalCode,
-                    phoneNumber,
-                    address1,
-                    address2,
-                },
-                order: getCart.map((x) => ({
-                    idItem: x._id,
-                    titleItem: x.title,
-                    price: x.price,
-                    quantity: x.quantity,
-                })),
-                totalDelivery,
-                totalAmount: selectorTotalAmountCart,
-            })
+            const req = axios.post(
+                process.env.REACT_APP_SERVER + '/api/add/orders',
+                {
+                    ref,
+                    customerinfo: {
+                        email,
+                        firstName,
+                        lastName,
+                        postalCode,
+                        phoneNumber,
+                        address1,
+                        address2,
+                    },
+                    order: getCart.map((x) => ({
+                        idItem: x._id,
+                        titleItem: x.title,
+                        price: x.price,
+                        quantity: x.quantity,
+                    })),
+                    totalDelivery,
+                    totalAmount: selectorTotalAmountCart,
+                }
+            )
             const res = await req
             if (res.status == 200) {
                 this.props.clearCart([])
@@ -136,7 +139,7 @@ class CheckoutContainer extends Component {
             const token = window.localStorage.getItem('token')
             const req = axios({
                 method: 'get',
-                url: '/api/users/me',
+                url: process.env.REACT_APP_SERVER + '/api/users/me',
                 headers: {
                     authorization: token,
                 },

@@ -14,7 +14,7 @@ class AdminFormDeleteItem extends Component {
     handleDelete = (id) => {
         axios({
             method: 'delete',
-            url: '/api/delete/item',
+            url: process.env.REACT_APP_SERVER + '/api/delete/item',
             data: {
                 id: id,
             },

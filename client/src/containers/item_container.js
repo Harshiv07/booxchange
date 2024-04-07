@@ -12,7 +12,8 @@ class ItemContainer extends Component {
 
     componentDidMount = () =>
         this.props.fetchItemApi(
-            `/api/productsdata/${this.props.match.params.id}`
+            process.env.REACT_APP_SERVER +
+                `/api/productsdata/${this.props.match.params.id}`
         )
 
     render = () => <Item {...this.props} {...this.state} />

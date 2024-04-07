@@ -21,7 +21,9 @@ class ProductsListContainer extends Component {
     }
 
     componentDidMount = () => {
-        this.props.fetchDataApi('/api/productsdata')
+        this.props.fetchDataApi(
+            process.env.REACT_APP_SERVER + '/api/productsdata'
+        )
     }
 
     currentPageHandler = (x) => {

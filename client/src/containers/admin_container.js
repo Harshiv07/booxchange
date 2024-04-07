@@ -33,7 +33,7 @@ class AdminContainer extends Component {
         try {
             const req = axios({
                 method: 'post',
-                url: '/api/admin',
+                url: process.env.REACT_APP_SERVER + '/api/admin',
                 data: {
                     id: this.state.email,
                     pass: this.state.password,

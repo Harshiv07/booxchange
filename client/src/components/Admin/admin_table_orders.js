@@ -13,7 +13,9 @@ export default class AdminTableOrders extends Component {
 
     async componentDidMount() {
         try {
-            const response = await axios.get('/api/orders')
+            const response = await axios.get(
+                process.env.REACT_APP_SERVER + '/api/orders'
+            )
             const apiList = await response.data
             this.setState({ apiList })
         } catch (error) {

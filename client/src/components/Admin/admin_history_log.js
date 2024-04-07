@@ -13,7 +13,9 @@ export class AdminHistoryLog extends Component {
 
     componentDidMount = async () => {
         try {
-            const response = await axios.get('/api/log')
+            const response = await axios.get(
+                process.env.REACT_APP_SERVER + '/api/log'
+            )
             const logData = await response.data
             this.setState({ logData })
         } catch (error) {

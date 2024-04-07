@@ -16,7 +16,7 @@ class Secret extends Component {
         try {
             const response = await axios({
                 method: 'get',
-                url: '/api/admin/auth',
+                url: process.env.REACT_APP_SERVER + '/api/admin/auth',
                 headers: { Authorization: localStorage.getItem('adminID') },
             })
             const apiAuth = await response.data.authorization

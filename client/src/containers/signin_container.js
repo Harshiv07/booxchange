@@ -57,13 +57,16 @@ class SignupContainer extends Component {
 
     onLogin = async () => {
         try {
-            const req = axios.post('/api/users/login', {
-                email: this.state.email,
-                password: this.state.password,
-                headers: {
-                    'content-type': 'application/json',
-                },
-            })
+            const req = axios.post(
+                process.env.REACT_APP_SERVER + '/api/users/login',
+                {
+                    email: this.state.email,
+                    password: this.state.password,
+                    headers: {
+                        'content-type': 'application/json',
+                    },
+                }
+            )
             const response = await req
             localStorage.setItem('token', response.data.token)
             this.setState({ apiResponse: 'success' })
@@ -77,11 +80,14 @@ class SignupContainer extends Component {
 
     onSignup = async () => {
         try {
-            const req = axios.post('/api/users', {
-                name: this.state.name,
-                email: this.state.emailsignup,
-                password: this.state.passwordsignup,
-            })
+            const req = axios.post(
+                process.env.REACT_APP_SERVER + '/api/users',
+                {
+                    name: this.state.name,
+                    email: this.state.emailsignup,
+                    password: this.state.passwordsignup,
+                }
+            )
             const response = await req
             console.log(response.data)
             localStorage.setItem('token', response.data.token)

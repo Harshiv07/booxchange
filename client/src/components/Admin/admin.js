@@ -17,7 +17,9 @@ export default class Admin extends Component {
 
     componentDidMount = async () => {
         try {
-            const response = await axios.get('/api/productsdata')
+            const response = await axios.get(
+                process.env.REACT_APP_SERVER + '/api/productsdata'
+            )
             const apiList = await response.data
             this.setState({ apiList })
         } catch (error) {

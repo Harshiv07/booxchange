@@ -73,7 +73,7 @@ class NavbarContainer extends Component {
             const token = window.localStorage.getItem('token')
             const req = axios({
                 method: 'get',
-                url: '/api/auth',
+                url: process.env.REACT_APP_SERVER + '/api/auth',
                 headers: {
                     authorization: token,
                 },
@@ -95,7 +95,7 @@ class NavbarContainer extends Component {
 
             const res = axios({
                 method: 'post',
-                url: '/api/users/logout',
+                url: process.env.REACT_APP_SERVER + '/api/users/logout',
                 headers: {
                     authorization: token,
                 },

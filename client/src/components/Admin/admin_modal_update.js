@@ -33,7 +33,7 @@ class AdminModalUpdate extends Component {
     onSubmit = (id, title, author, price, tags, images, description) => {
         axios({
             method: 'put',
-            url: '/api/update/item',
+            url: process.env.REACT_APP_SERVER + '/api/update/item',
             data: {
                 id: id,
                 title: title,

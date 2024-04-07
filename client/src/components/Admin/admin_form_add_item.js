@@ -25,7 +25,7 @@ class AdminFormAddItem extends Component {
 
     onSubmit = (title, author, price, tags, images, description) => {
         axios
-            .post('/api/add/item', {
+            .post(process.env.REACT_APP_SERVER + '/api/add/item', {
                 title,
                 author,
                 price,
